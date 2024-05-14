@@ -48,4 +48,31 @@ function divide(a, b) {
     return displayTest.textContent = (b > 0) ? (a / b).toFixed(2) : ("🧠n´t?");
 }
 
+function operate(a, b, sign) {
+    a = Number(a);
+    b = Number(b);
+
+    console.log(typeof (a), typeof (b), typeof (sign));
+    switch (sign) {
+        case "+":
+            console.log(add(a, b));
+            break;
+        case "-":
+            console.log(rest(a, b));
+            break;
+        case "*":
+            console.log(multiply(a, b));
+            break;
+        case "/":
+            console.log(divide(a, b));
+            break;
+        default:
+            console.log("Samamadakwe");
+    }
+
+}
+let a = prompt("a");
+let b = prompt("b");
+let sign = prompt("sign");
+operate(a, b, sign);
 
